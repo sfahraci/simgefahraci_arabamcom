@@ -16,7 +16,7 @@ class ServiceConnector {
     companion object{
 
         private val API_URL = "https://sandbox.arabamd.com/api/v1/"
-        public var canliSkorAPI: ArabamcomApi? = null
+        public var arabamcomApi: ArabamcomApi? = null
 
         fun init() {
             val loggingInterceptor = HttpLoggingInterceptor()
@@ -34,7 +34,7 @@ class ServiceConnector {
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
-            canliSkorAPI = retrofit.create(ArabamcomApi::class.java)
+            arabamcomApi = retrofit.create(ArabamcomApi::class.java)
         }
     }
 

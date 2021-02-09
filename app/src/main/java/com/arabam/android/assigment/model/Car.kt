@@ -8,6 +8,8 @@ data class Car(
     val title : String,
     val modelName : String,
     val priceFormatted : String,
-    val date : String,
-    val photo : String
+    val dateFormatted : String,
+    val photo : String,
+    val photos : List<String>,
+    val text : String
 )

@@ -9,7 +9,10 @@ import retrofit2.http.QueryMap
  interface ArabamcomApi {
 
 
-    @GET("listing?sort=1&sortDirection=0&take=10")
-    fun getProductList(): Call<List<Car>>?
+    @GET("listing?")
+    fun getCarList(@QueryMap params : Map<String, Int>): Call<List<Car>>?
+
+     @GET("detail?")
+     fun getCarDetail(@QueryMap params : Map<String, Int>): Call<Car>?
 
 }
